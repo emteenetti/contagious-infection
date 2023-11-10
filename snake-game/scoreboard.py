@@ -1,5 +1,5 @@
 from turtle import Turtle
-import snake as s
+from snake import Snake
 
 ALIGNMENT = "center"
 FONT = ("Courier", 24, "normal")
@@ -25,17 +25,14 @@ class Scoreboard(Turtle):
         self.gameOn = False
         self.write("GameOver, Click to Restart", align=ALIGNMENT, font=FONT)
 
-
     def increase_score(self):
         self.score += 1
         self.clear()
         self.update_scoreboard()
 
-    def restart_game(self):
-        self.clear()
-        self.score = 0
-        self.update_scoreboard()
-        self.gameOn = True
-        s.Snake.restart_game()
-
-
+    # def restart_game(self):
+    #     self.clear()
+    #     self.score = 0
+    #     self.update_scoreboard()
+    #     self.gameOn = True
+    #     Snake().restart_game()
